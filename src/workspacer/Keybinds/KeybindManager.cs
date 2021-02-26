@@ -63,9 +63,9 @@ namespace workspacer
             {
                 new Tuple<string, Action>("ok", () => { }),
             });
-          
+
             _keybindWarning.Show();
-            
+
         }
 
         public void Subscribe(KeyModifiers mod, Keys key, KeybindHandler handler, string name)
