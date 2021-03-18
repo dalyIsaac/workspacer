@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,11 +66,6 @@ namespace workspacer
         /// rotate to the next layout
         /// </summary>
         void NextLayoutEngine(); // mod-space
-
-        /// <summary>
-        /// switches to the target layout
-        /// </summary>
-        void SwitchLayoutEngineToIndex(int targetIndex);
 
         /// <summary>
         ///  reset the active layout

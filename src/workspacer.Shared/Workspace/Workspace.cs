@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -139,18 +139,6 @@ namespace workspacer
                 _layoutIndex++;
             }
             DoLayout();
-        }
-
-        public void SwitchLayoutEngineToIndex(int targetIndex)
-        {
-            if (targetIndex >= _layoutEngines.Length)
-            {
-                _layoutIndex = 0;
-            }
-            else
-            {
-                _layoutIndex = targetIndex;
-            }
         }
 
         public void ResetLayout()
