@@ -34,14 +34,14 @@ namespace workspacer
             this.SearchBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // DataGridView
-            // 
+            //
             this.DataGridView.AllowUserToAddRows = false;
             this.DataGridView.AllowUserToDeleteRows = false;
             this.DataGridView.AllowUserToOrderColumns = true;
-            this.DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView.Location = new System.Drawing.Point(18, 83);
@@ -51,20 +51,20 @@ namespace workspacer
             this.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView.Size = new System.Drawing.Size(882, 442);
             this.DataGridView.TabIndex = 0;
-            // 
+            //
             // SubtitleText
-            // 
+            //
             this.SubtitleText.AutoSize = true;
             this.SubtitleText.Location = new System.Drawing.Point(14, 10);
             this.SubtitleText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SubtitleText.Name = "SubtitleText";
             this.SubtitleText.Size = new System.Drawing.Size(0, 15);
             this.SubtitleText.TabIndex = 2;
-            // 
+            //
             // SearchBox
-            // 
-            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBox.Location = new System.Drawing.Point(18, 54);
             this.SearchBox.Name = "SearchBox";
@@ -72,9 +72,9 @@ namespace workspacer
             this.SearchBox.Size = new System.Drawing.Size(882, 23);
             this.SearchBox.TabIndex = 3;
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
-            // 
+            //
             // KeyValueTable
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;

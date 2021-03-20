@@ -31,6 +31,7 @@ namespace workspacer
 
         public bool CanMinimizeWindows { get; set; } = false;
 
+
         private System.Timers.Timer _timer;
         private PipeServer _pipeServer;
         private Func<ILayoutEngine[]> _defaultLayouts;
@@ -62,6 +63,7 @@ namespace workspacer
             WorkspaceContainer = new WorkspaceContainer(this);
             WindowRouter = new WindowRouter(this);
             MonitorContainer = new NativeMonitorContainer();
+            CanMinimizeWindows = canMinimizeWindows;
 
             Windows.WindowCreated += Workspaces.AddWindow;
             Windows.WindowDestroyed += Workspaces.RemoveWindow;
@@ -196,7 +198,6 @@ namespace workspacer
         {
             SystemTray.Dispose();
             Application.Exit();
-            Environment.Exit(0);
         }
 
         private void UpdateActiveHandles()
