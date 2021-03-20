@@ -10,7 +10,6 @@ param (
 $env:Path += ";C:\Program Files (x86)\WiX Toolset v3.11\bin"
 
 Remove-Item out -Recurse
-Remove-Item .\scripts\workspacer\bin -Recurse
 
 dotnet restore
 dotnet publish /p:DefineConstants=BRANCH_unstable /p:Version=$version --configuration Release --no-restore
