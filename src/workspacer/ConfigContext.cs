@@ -29,6 +29,8 @@ namespace workspacer
         public IWindowRouter WindowRouter { get; set; }
         public IMonitorContainer MonitorContainer { get; set; }
 
+        public bool CanMinimizeWindows { get; set; }
+
         private System.Timers.Timer _timer;
         private PipeServer _pipeServer;
         private Func<ILayoutEngine[]> _defaultLayouts;
@@ -60,6 +62,7 @@ namespace workspacer
             WorkspaceContainer = new WorkspaceContainer(this);
             WindowRouter = new WindowRouter(this);
             MonitorContainer = new NativeMonitorContainer();
+            CanMinimizeWindows = canMinimizeWindows;
 
             Windows.WindowCreated += Workspaces.AddWindow;
             Windows.WindowDestroyed += Workspaces.RemoveWindow;
