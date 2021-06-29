@@ -143,6 +143,19 @@ namespace workspacer
             DoLayout();
         }
 
+        public void SwitchLayoutEngineToIndex(int targetIndex)
+        {
+            if (targetIndex >= _layoutEngines.Length)
+            {
+                _layoutIndex = 0;
+            }
+            else
+            {
+                _layoutIndex = targetIndex;
+            }
+            DoLayout();
+        }
+
         public void ResetLayout()
         {
             GetLayoutEngine().ResetPrimaryArea();
