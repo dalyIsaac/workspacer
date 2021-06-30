@@ -8,7 +8,7 @@ namespace workspacer
 {
     /// <summary>
     /// IWorkspace provides a common interface for workspace-related operations.
-    /// workspaces logically contain a set of windows, and allow callers to interact with the 
+    /// workspaces logically contain a set of windows, and allow callers to interact with the
     /// windows via a set of methods, and all the organization of the windows via layout engines
     /// </summary>
     public interface IWorkspace
@@ -22,6 +22,11 @@ namespace workspacer
         /// name of the currently active layout
         /// </summary>
         string LayoutName { get; }
+
+        /// <summary>
+        /// names of the layout engines contained by this workspace
+        /// </summary>
+        IEnumerable<string> LayoutEngineNames { get; }
 
         /// <summary>
         /// set of windows that are contained within the workspace
@@ -80,7 +85,7 @@ namespace workspacer
         /// <summary>
         /// focus the last focused window
         /// </summary>
-        void FocusLastFocusedWindow(); 
+        void FocusLastFocusedWindow();
 
         /// <summary>
         /// rotate focus to the next window
