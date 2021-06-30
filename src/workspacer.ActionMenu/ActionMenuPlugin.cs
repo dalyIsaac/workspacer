@@ -71,22 +71,8 @@ namespace workspacer.ActionMenu
             return new ActionMenuItemBuilder(this)
                 .Add("restart workspacer", () => _context.Restart())
                 .Add("quit workspacer", () => _context.Quit())
-                .AddMenu("switch to window", () => CreateSwitchToWindowMenu(_context));
-        }
-
-        private ActionMenuItemBuilder CreateSwitchToWindowMenu(IConfigContext context)
-        {
-            var builder = Create();
-            var workspaces = context.WorkspaceContainer.GetAllWorkspaces();
-            foreach (var workspace in workspaces)
-            {
-                foreach (var window in workspace.ManagedWindows)
-                {
-                    var text = $"[{workspace.Name}] {window.Title}";
-                    builder.Add(text, () => context.Workspaces.SwitchToWindow(window));
-                }
-            }
-            return builder;
+                .AddMenu("switch to window", () => DefaultActionMenuItems.CreateSwitchToWindowMenu(this, _context))
+                .AddMenu("switch to layout", () => DefaultActionMenuItems.CreateSwitchToLayoutMenu(this, _context));
         }
     }
 }
